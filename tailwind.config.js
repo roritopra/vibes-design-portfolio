@@ -1,15 +1,28 @@
-/** @type {import('tailwindcss').Config} */
-export default {
+const withMT = require("@material-tailwind/react/utils/withMT");
+
+module.exports = withMT({
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
-    "./node_modules/flowbite/**/*.js",
+    'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}',
+    "path-to-your-node_modules/@material-tailwind/react/components/**/*.{js,ts,jsx,tsx}",
+    "path-to-your-node_modules/@material-tailwind/react/theme/components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {},
+    fontFamily: {
+      bagnard: ["Bagnard", "sans-serif"],
+      darkestLight: ["DarkestGrotesque Light", "sans-serif"],
+      darkestRegular: ["DarkestGrotesque Regular", "sans-serif"],
+      darkestMedium: ["DarkestGrotesque Medium", "sans-serif"],
+      darkestSemiBold: ["DarkestGrotesque Semibold", "sans-serif"],
+      darkestBold: ["DarkestGrotesque Bold", "sans-serif"],
+      darkestExtraBold: ["DarkestGrotesque ExtraBold", "sans-serif"],
+      darkestBlack: ["DarkestGrotesque Black", "sans-serif"],
+    },
   },
   plugins: [
 		require('flowbite/plugin')
 	],
-}
+})
 
