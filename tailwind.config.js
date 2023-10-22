@@ -24,18 +24,18 @@ module.exports = withMT({
       darkestExtraBold: ["DarkestGrotesque ExtraBold", "sans-serif"],
       darkestBlack: ["DarkestGrotesque Black", "sans-serif"],
     },
+    screens: {
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+      maxXs: {'max': '480px'},
+      maxSm: {'max': '640px'},
+      maxMd: {'max': '768px'},
+      maxLg: {'max': '1024px'},
+      maxXl: {'max': '1280px'}
+    },
   },
-  screens: {
-		sm: '640px',
-		md: '768px',
-		lg: '1024px',
-		xl: '1280px',
-		maxXs: {'max': '480px'},
-		maxSm: {'max': '640px'},
-		maxMd: {'max': '768px'},
-		maxLg: {'max': '1024px'},
-		maxXl: {'max': '1280px'}
-	},
   plugins: [
 		require('flowbite/plugin')
 	],
