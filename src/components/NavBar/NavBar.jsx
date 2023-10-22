@@ -1,12 +1,9 @@
-import { NavBarBrand } from "./NavBarBrand";
-import { menuLinks } from "../menuLinks/menuLinks";
+import { menuLinks } from "./menuLinks/menuLinks";
 import { Link } from "react-router-dom";
 
 function NavBar() {
   return (
     <>
-      <nav className="flex items-center">
-        <NavBarBrand />
         <div className="hidden items-center justify-center bg-white border-2 border-solid border-[#383838] py-[10px] cursor-pointer maxLg:w-[100%] maxLg:flex ">
           <img className="w-[42px] h-[50px]" src="/icons/menu_mobile.svg" alt="" />
         </div>
@@ -14,13 +11,12 @@ function NavBar() {
         <ul className="flex items-center w-full maxLg:hidden">
           {
             menuLinks.map((menu, index) => (
-              <li key={index} className={`flex items-center justify-center w-20% text-[#383838] border-[#383838] border-2 py-[21px] bg-white font-darkestMedium text-lg cursor-pointer ${index === menuLinks.length - 1 ? 'bg-[#A8AFF0] text-white' : ''}`}>
+              <li key={index} className={`flex items-center justify-center w-20% text-[#383838] border-[#383838] border-2 py-[21px] bg-white font-darkestBold text-lg cursor-pointer ${index === menuLinks.length - 1 ? 'bg-[#A8AFF0] text-white' : ''}`}>
                   <Link to={menu.path}>{menu.text}</Link>
               </li>
             ))
           }
         </ul>
-      </nav>
     </>
   );
 }
