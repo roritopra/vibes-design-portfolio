@@ -9,7 +9,11 @@ module.exports = withMT({
     "path-to-your-node_modules/@material-tailwind/react/theme/components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      width: {
+        '20%': '20%',
+      }
+    },
     fontFamily: {
       bagnard: ["Bagnard", "sans-serif"],
       darkestLight: ["DarkestGrotesque Light", "sans-serif"],
