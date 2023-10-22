@@ -1,5 +1,6 @@
 import { NavBarBrand } from "./NavBarBrand";
-import { navLinks } from "../navLinks/navLinks";
+import { menuLinks } from "../menuLinks/menuLinks";
+import { Link } from "react-router-dom";
 
 function NavBar() {
   return (
@@ -11,21 +12,13 @@ function NavBar() {
         </div>
         
         <ul className="flex items-center w-full maxLg:hidden">
-          <li className="flex items-center justify-center w-20% text-[#383838] border-[#383838] border-2 py-[21px] bg-white font-darkestMedium text-lg cursor-pointer">
-              Home
-          </li>
-          <li className="flex items-center justify-center w-20% text-[#383838] border-[#383838] border-2 py-[21px] bg-white font-darkestMedium text-lg cursor-pointer">
-              Projects 
-          </li>
-          <li className="flex items-center justify-center w-20% text-[#383838] border-[#383838] border-2 py-[21px] bg-white font-darkestMedium text-lg cursor-pointer">
-              Contact
-          </li>
-          <li className="flex items-center justify-center w-20% text-[#383838] border-[#383838] border-2 py-[21px] bg-white font-darkestMedium text-lg cursor-pointer">
-              About Us
-          </li>
-          <li className="flex items-center justify-center w-20% text-white border-[#383838] border-2 py-[21px] bg-[#A8AFF0] font-darkestMedium text-lg cursor-pointer">
-              Log in
-          </li>
+          {
+            menuLinks.map((menu, index) => (
+              <li key={index} className={`flex items-center justify-center w-20% text-[#383838] border-[#383838] border-2 py-[21px] bg-white font-darkestMedium text-lg cursor-pointer ${index === menuLinks.length - 1 ? 'bg-[#A8AFF0] text-white' : ''}`}>
+                  <Link to={menu.path}>{menu.text}</Link>
+              </li>
+            ))
+          }
         </ul>
       </nav>
     </>

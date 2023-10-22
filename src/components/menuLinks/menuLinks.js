@@ -1,28 +1,28 @@
-export const navLinks = [
+export const menuLinks = [
     {   
         id: 1,
-        name: 'Home',
+        text: 'Home',
         path: '/',
     },
     {   
         id: 2,
-        name: 'Projects',
+        text: 'Projects',
         path: '/projects',
     },
     {   
         id: 3,
-        name: 'Contact',
+        text: 'Contact',
         path: '/contact',
     },
 
     {
         id: 4,
-        name: 'About Us',
+        text: 'About Us',
         path: '/aboutus',
     },
     {
         id: 5,
-        name: 'Login',
+        text: 'Login',
         path: '/Login',
     },
 ];
