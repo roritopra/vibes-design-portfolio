@@ -11,7 +11,7 @@ function NavBar() {
         <ul className="flex items-center w-full maxLg:hidden">
           {
             menuLinks.map((menu, index) => (
-              <li key={index} className={`flex items-center justify-center w-20% text-[#383838] border-[#383838] border-2 py-[21px] bg-white font-darkestBold text-lg cursor-pointer ${index === menuLinks.length - 1 ? 'bg-[#A8AFF0] text-white' : ''}`}>
+              <li key={index} className={`flex items-center justify-center w-20% text-[#383838] border-[#383838] border-2 py-[21px] bg-white font-darkestBold text-lg cursor-pointer ${index === menuLinks.length - 1 ? 'text-[#ffffff] !bg-[#A8AFF0]' : ''}`}>
                   <Link to={menu.path}>{menu.text}</Link>
               </li>
             ))
