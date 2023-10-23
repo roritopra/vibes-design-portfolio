@@ -1,5 +1,5 @@
 import { NavBarBrand } from "../NavBar/NavBarBrand"
-import NavBar from "../NavBar/NavBar"
+import { NavBar } from "../NavBar/NavBar"
 
 function Header() {
   return (
