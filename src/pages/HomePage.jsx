@@ -26,11 +26,13 @@ function HomePage() {
         </div>
       </header>
       <section className="border-t-2 border-solid border-[#383838] flex">
-        <div className="w-[40%] p-11">
-          <h2 className="text-[#373737] text-5xl font-bagnard">Together we bring ideas to life.</h2>
+        <div className="w-[40%] flex justify-center items-center">
+          <h2 className="text-[#373737] p-11 text-5xl font-bagnard">
+            Together we bring ideas to life.
+          </h2>
         </div>
-        <div>
-          <p>
+        <div className="w-[60%]">
+          <p className="p-11 text-lg text-[#373737] font-darkestMedium border-l-2 border-solid border-[#383838]">
             From concept to production, we create compelling digital experiences
             that tell your brand’s unique story. No challenge is too small or
             too big, and we love them all, but most of all, we love creating
@@ -39,6 +41,43 @@ function HomePage() {
             independent coffee brewer - we want to work with you!
           </p>
         </div>
+      </section>
+      <section className="p-11 grid sm:grid-cols-2 lg:grid-cols-3 gap-5 border-t-2 border-solid border-[#383838] bg-[#383838]">
+        <article className="bg-[#A8AFF0] p-8 rounded-lg">
+          <img src="/icons/heart_icon.svg" alt="Icon Heart" />
+          <h3 className="font-bagnard text-[#383838] text-4xl mt-6">Logo</h3>
+          <p className="text-black text-lg font-darkestMedium pb-7">
+            No logo? No problem. We can design your brand assets and guidelines.
+          </p>
+          <button className="bg-[#383838] px-4 pb-1 flex items-center gap-2 text-white font-darkestRegular text-lg rounded-3xl">
+            Start
+            <img className="pt-1" src="/icons/right_icon_light.svg" alt="Right Icon" />
+            </button>
+        </article>
+
+        <article className="bg-[#B4FFC9] p-8 rounded-lg">
+          <img src="/icons/figma_icon.svg" alt="Icon Heart" />
+          <h3 className="font-bagnard text-[#383838] text-4xl mt-6">Web Design</h3>
+          <p className="text-black text-lg font-darkestMedium pb-7">
+            Do not have a design? I can create a beautiful website in no time.
+          </p>
+          <button className="bg-[#383838] px-4 pb-1 flex items-center gap-2 text-white font-darkestRegular text-lg rounded-3xl">
+            Start
+            <img className="pt-1" src="/icons/right_icon_light.svg" alt="Right Icon" />
+            </button>
+        </article>
+        
+        <article className="bg-[#EE7E3F] p-8 rounded-lg">
+          <img src="/icons/webflow_icon.svg" alt="Icon Heart" />
+          <h3 className="font-bagnard text-[#383838] text-4xl mt-6">Webflow</h3>
+          <p className="text-black text-lg font-darkestMedium pb-7">
+            Looking for a clean and fast build for your design? We are your team.
+          </p>
+          <button className="bg-[#383838] px-4 pb-1 flex items-center gap-2 text-white font-darkestRegular text-lg rounded-3xl">
+            Start
+            <img className="pt-1" src="/icons/right_icon_light.svg" alt="Right Icon" />
+            </button>
+        </article>
       </section>
     </main>
   );
