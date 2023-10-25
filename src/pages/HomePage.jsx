@@ -1,25 +1,31 @@
 function HomePage() {
   return (
     <main className="pt-11 border-x-2 border-solid border-[#383838]">
-      <header className="flex">
-        <div className="w-[55%] flex justify-between flex-col">
-          <div className="pl-[60px]">
-            <h1 className="text-[#373737] text-7xl font-bagnard mb-5 mt-24 pr-4">
+      <header className="flex maxMd:flex-col">
+        <div className="w-[55%] flex justify-between flex-col maxMd:w-full">
+          <div className="pl-[60px] maxMd:px-5">
+            <h1 className="text-[#373737] text-7xl font-bagnard mb-5 mt-24 pr-4 maxLg:text-5xl maxMd:text-3xl maxMd:mt-4 maxSm:text-sm">
               We create impactful digital experiences.
             </h1>
-            <p className="text-[#373737] text-2xl font-darkestMedium pr-4">
+            <p className="text-[#373737] text-2xl font-darkestMedium pr-4 maxMd:text-xl maxMd:mb-14">
               We combine forward-thinking design with modern technology to tell
               stories that transform and grow our partners brands.
             </p>
           </div>
           <div>
-            <button className="flex items-center justify-center gap-3 bg-[#A8AFF0] w-full font-darkestBold text-3xl py-6 border-t-2 border-solid border-[#383838]">
+            <div className="maxMd:flex hidden px-8 pb-14 mb-14 border-b-2 border-solid border-[#383838]">
+              <button className="flex items-center justify-center gap-3 bg-[#A8AFF0] w-full font-darkestBold text-xl py-2 border-2 border-solid border-[#383838] rounded-full">
+                Check out our best projects
+                <img className="pt-3" src="/icons/right_icon.svg" alt="" />
+              </button>
+            </div>
+            <button className="flex items-center justify-center gap-3 bg-[#A8AFF0] w-full font-darkestBold text-3xl py-6 border-t-2 border-solid border-[#383838] maxMd:hidden">
               Check out our best projects
               <img className="pt-3" src="/icons/right_icon.svg" alt="" />
             </button>
           </div>
         </div>
-        <div className="w-[45%] flex items-center justify-center pe-[60px]">
+        <div className="w-[45%] flex items-center justify-center pe-[60px] maxMd:w-full maxMd:px-5">
           <div className="flex justify-center border-x-2 border-t-2 border-solid border-[#383838] rounded-t-full w-full pt-52">
             <img src="/imgs/test_landing.png" alt="" />
           </div>
@@ -27,12 +33,12 @@ function HomePage() {
       </header>
       <section className="border-t-2 border-solid border-[#383838] flex">
         <div className="w-[40%] flex justify-center items-center">
-          <h2 className="text-[#373737] p-11 text-5xl font-bagnard">
+          <h2 className="text-[#373737] p-11 text-5xl font-bagnard maxMd:text-3xl maxMd:p-4">
             Together we bring ideas to life.
           </h2>
         </div>
         <div className="w-[60%]">
-          <p className="p-11 text-lg text-[#373737] font-darkestMedium border-l-2 border-solid border-[#383838]">
+          <p className="p-11 text-lg text-[#373737] font-darkestMedium border-l-2 border-solid border-[#383838] maxMd:text-base maxMd:p-4">
             From concept to production, we create compelling digital experiences
             that tell your brand’s unique story. No challenge is too small or
             too big, and we love them all, but most of all, we love creating
@@ -42,11 +48,11 @@ function HomePage() {
           </p>
         </div>
       </section>
-      <section className="p-11 grid sm:grid-cols-2 lg:grid-cols-3 gap-5 border-t-2 border-solid border-[#383838] bg-[#383838] bg-hero-pattern bg-[length:100%]">
-        <article className="bg-[#A8AFF0] p-8 rounded-lg">
+      <section className="p-11 grid sm:grid-cols-2 lg:grid-cols-3 gap-5 border-t-2 border-solid border-[#383838] bg-[#383838] bg-hero-pattern bg-[length:100%] maxMd:p-5">
+        <article className="bg-[#A8AFF0] p-8 rounded-lg maxMd:p-4">
           <img src="/icons/heart_icon.svg" alt="Icon Heart" />
-          <h3 className="font-bagnard text-[#383838] text-4xl mt-6">Logo</h3>
-          <p className="text-black text-lg font-darkestMedium pb-7">
+          <h3 className="font-bagnard text-[#383838] text-4xl mt-6 maxMd:text-3xl">Logo</h3>
+          <p className="text-black text-lg font-darkestMedium pb-7 maxMd:text-base">
             No logo? No problem. We can design your brand assets and guidelines.
           </p>
           <button className="bg-[#383838] px-4 pb-1 flex items-center gap-2 text-white font-darkestRegular text-lg rounded-3xl">
@@ -55,10 +61,10 @@ function HomePage() {
             </button>
         </article>
 
-        <article className="bg-[#B4FFC9] p-8 rounded-lg">
+        <article className="bg-[#B4FFC9] p-8 rounded-lg maxMd:p-4">
           <img src="/icons/figma_icon.svg" alt="Icon Heart" />
-          <h3 className="font-bagnard text-[#383838] text-4xl mt-6">Web Design</h3>
-          <p className="text-black text-lg font-darkestMedium pb-7">
+          <h3 className="font-bagnard text-[#383838] text-4xl mt-6 maxMd:text-3xl">Web Design</h3>
+          <p className="text-black text-lg font-darkestMedium pb-7 maxMd:text-base">
             Do not have a design? I can create a beautiful website in no time.
           </p>
           <button className="bg-[#383838] px-4 pb-1 flex items-center gap-2 text-white font-darkestRegular text-lg rounded-3xl">
@@ -67,10 +73,10 @@ function HomePage() {
             </button>
         </article>
         
-        <article className="bg-[#EE7E3F] p-8 rounded-lg">
+        <article className="bg-[#EE7E3F] p-8 rounded-lg maxMd:p-4">
           <img src="/icons/webflow_icon.svg" alt="Icon Heart" />
-          <h3 className="font-bagnard text-[#383838] text-4xl mt-6">Webflow</h3>
-          <p className="text-black text-lg font-darkestMedium pb-7">
+          <h3 className="font-bagnard text-[#383838] text-4xl mt-6 maxMd:text-3xl">Webflow</h3>
+          <p className="text-black text-lg font-darkestMedium pb-7 maxMd:text-base">
             Looking for a clean and fast build for your design? We are your team.
           </p>
           <button className="bg-[#383838] px-4 pb-1 flex items-center gap-2 text-white font-darkestRegular text-lg rounded-3xl">
