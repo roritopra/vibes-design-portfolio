@@ -1,6 +1,6 @@
 function HomePage() {
   return (
-    <main className="pt-11 border-x-2 border-b-2 border-solid border-[#383838]">
+    <main className="pt-11 border-x-2 border-solid border-[#383838]">
       <header className="flex">
         <div className="w-[55%] flex justify-between flex-col">
           <div className="pl-[60px]">

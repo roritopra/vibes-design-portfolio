@@ -6,8 +6,8 @@ export function Footer() {
           © 2023 Vibes design and any associated logos are trademarks, service
           marks or registered trademarks of Vibes Design.
         </p>
-        <div className="bg-[#383838] p-5">
-            <img className="w-[50px]" src="/icons/logo.svg" alt="Logo Icon" />
+        <div className="bg-[#383838] px-5 py-1">
+            <img className="w-[60px]" src="/icons/logo.svg" alt="Logo Icon" />
         </div>
       </footer>
     </>
