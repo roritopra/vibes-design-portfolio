@@ -14,12 +14,12 @@ function HomePage() {
           </div>
           <div>
             <div className="maxMd:flex hidden px-8 pb-14 mb-14 border-b-2 border-solid border-[#383838]">
-              <button className="flex items-center justify-center gap-3 bg-[#A8AFF0] w-full font-darkestBold text-xl py-2 border-2 border-solid border-[#383838] rounded-full">
+              <button className="flex items-center justify-center gap-3 bg-[#A8AFF0] w-full font-darkestBold text-xl py-2 border-2 border-solid border-[#383838] rounded-full transition-all hover:bg-[#848ac2] hover:transition-all">
                 Check out our best projects
                 <img className="pt-3" src="/icons/right_icon.svg" alt="" />
               </button>
             </div>
-            <button className="flex items-center justify-center gap-3 bg-[#A8AFF0] w-full font-darkestBold text-3xl py-6 border-t-2 border-solid border-[#383838] maxMd:hidden">
+            <button className="flex items-center justify-center gap-3 bg-[#A8AFF0] w-full font-darkestBold text-3xl py-6 border-t-2 border-solid border-[#383838] transition-all hover:bg-[#848ac2] hover:transition-all maxMd:hidden">
               Check out our best projects
               <img className="pt-3" src="/icons/right_icon.svg" alt="" />
             </button>
@@ -55,7 +55,7 @@ function HomePage() {
           <p className="text-black text-lg font-darkestMedium pb-7 maxMd:text-base">
             No logo? No problem. We can design your brand assets and guidelines.
           </p>
-          <button className="bg-[#383838] px-4 pb-1 flex items-center gap-2 text-white font-darkestRegular text-lg rounded-3xl">
+          <button className="bg-[#383838] px-4 pb-1 flex items-center gap-2 text-white font-darkestRegular text-lg rounded-3xl transition-all hover:bg-[#1f1f1f] hover:transition-all">
             Start
             <img className="pt-1" src="/icons/right_icon_light.svg" alt="Right Icon" />
             </button>
@@ -67,7 +67,7 @@ function HomePage() {
           <p className="text-black text-lg font-darkestMedium pb-7 maxMd:text-base">
             Do not have a design? I can create a beautiful website in no time.
           </p>
-          <button className="bg-[#383838] px-4 pb-1 flex items-center gap-2 text-white font-darkestRegular text-lg rounded-3xl">
+          <button className="bg-[#383838] px-4 pb-1 flex items-center gap-2 text-white font-darkestRegular text-lg rounded-3xl transition-all hover:bg-[#1f1f1f] hover:transition-all">
             Start
             <img className="pt-1" src="/icons/right_icon_light.svg" alt="Right Icon" />
             </button>
@@ -79,14 +79,14 @@ function HomePage() {
           <p className="text-black text-lg font-darkestMedium pb-7 maxMd:text-base">
             Looking for a clean and fast build for your design? We are your team.
           </p>
-          <button className="bg-[#383838] px-4 pb-1 flex items-center gap-2 text-white font-darkestRegular text-lg rounded-3xl">
+          <button className="bg-[#383838] px-4 pb-1 flex items-center gap-2 text-white font-darkestRegular text-lg rounded-3xl transition-all hover:bg-[#1f1f1f] hover:transition-all">
             Start
             <img className="pt-1" src="/icons/right_icon_light.svg" alt="Right Icon" />
             </button>
         </article>
       </section>
       <figure>
-        <img className="w-full" src="/imgs/gif_landing.gif" alt="" />
+        <img className="w-full" src="/imgs/gif_landing.gif" alt="Gif" />
       </figure>
     </main>
   );
