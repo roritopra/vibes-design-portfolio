@@ -1,7 +1,7 @@
 import { NavBarBrand } from "../NavBar/NavBarBrand"
 import { NavBar } from "../NavBar/NavBar"
 
-function Header() {
+export function Header() {
   return (
     <nav className="flex items-center">
         <NavBarBrand />
@@ -10,5 +10,3 @@ function Header() {
         
   )
 }
-
-export default Header

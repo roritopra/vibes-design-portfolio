@@ -10,6 +10,9 @@ module.exports = withMT({
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'hero-pattern': "url('/imgs/bg_landing.webp')",
+      },
       width: {
         '20%': '20%',
       }
