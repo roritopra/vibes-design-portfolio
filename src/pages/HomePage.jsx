@@ -79,6 +79,9 @@ function HomePage() {
             </button>
         </article>
       </section>
+      <figure>
+        <img className="w-full" src="/imgs/gif_landing.gif" alt="" />
+      </figure>
     </main>
   );
 }
