@@ -42,7 +42,7 @@ function HomePage() {
           </p>
         </div>
       </section>
-      <section className="p-11 grid sm:grid-cols-2 lg:grid-cols-3 gap-5 border-t-2 border-solid border-[#383838] bg-[#383838]">
+      <section className="p-11 grid sm:grid-cols-2 lg:grid-cols-3 gap-5 border-t-2 border-solid border-[#383838] bg-[#383838] bg-hero-pattern bg-[length:100%]">
         <article className="bg-[#A8AFF0] p-8 rounded-lg">
           <img src="/icons/heart_icon.svg" alt="Icon Heart" />
           <h3 className="font-bagnard text-[#383838] text-4xl mt-6">Logo</h3>
