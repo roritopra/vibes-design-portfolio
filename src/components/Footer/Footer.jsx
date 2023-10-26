@@ -7,7 +7,7 @@ export function Footer() {
           marks or registered trademarks of Vibes Design.
         </p>
         <div className="bg-[#383838] px-5 py-1 flex items-center justify-center">
-            <img className="w-[60px]" src="/icons/logo.svg" alt="Logo Icon" />
+          <img className="w-[60px]" src="/icons/logo.svg" alt="Logo Icon" />
         </div>
       </footer>
     </>
