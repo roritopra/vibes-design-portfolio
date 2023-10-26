@@ -5,7 +5,7 @@ export function NavBar() {
   return (
     <>
         <div className="hidden items-center justify-center bg-white border-2 border-solid border-[#383838] py-[10px] cursor-pointer maxLg:w-[100%] maxLg:flex ">
-          <img className="w-[42px] h-[50px]" src="/icons/menu_mobile.svg" alt="" />
+          <img className="w-[30px] h-[50px]" src="/icons/menu_mobile.svg" alt="" />
         </div>
         
         <ul className="flex items-center w-full maxLg:hidden">

@@ -1,4 +1,4 @@
-function HomePage() {
+export function HomePage() {
   return (
     <main className="pt-11 border-x-2 border-solid border-[#383838]">
       <header className="flex maxMd:flex-col">
@@ -91,5 +91,3 @@ function HomePage() {
     </main>
   );
 }
-
-export default HomePage;
