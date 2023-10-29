@@ -14,7 +14,8 @@ export function NavBar() {
 
       <ul className="flex items-center w-full maxLg:hidden">
         {menuLinks.map((menu, index) => (
-          <li
+          <Link
+            to={menu.path}
             key={index}
             className={`flex items-center justify-center w-20% text-[#383838] border-[#383838] border-2 py-[21px] bg-white font-darkestBold text-lg cursor-pointer transition-all hover:bg-[#bfbfbf] hover:transition-all ${
               index === menuLinks.length - 1
@@ -22,8 +23,8 @@ export function NavBar() {
                 : ""
             }`}
           >
-            <Link to={menu.path}>{menu.text}</Link>
-          </li>
+            {menu.text}
+          </Link>
         ))}
       </ul>
     </>
