@@ -6,9 +6,23 @@ export function HomePage() {
       <header className="flex maxMd:flex-col">
         <div className="w-[55%] flex justify-between flex-col maxMd:w-full">
           <div className="pl-[60px] maxMd:px-5">
-            <h1 className="text-[#373737] text-7xl font-bagnard mb-5 mt-40 pr-4 maxLg:text-5xl maxMd:text-3xl maxMd:mt-4 maxSm:text-sm">
-              We create impactful digital experiences.
-            </h1>
+            <div className="flex flex-col">
+              <h1 className="text-[#373737] text-7xl font-bagnard mt-28 pr-4 maxLg:text-5xl maxMd:text-3xl maxMd:mt-4 maxSm:text-sm">
+                <img
+                  className="relative bottom-4 right-9 maxMd:right-3"
+                  src="/icons/star1.svg"
+                  alt="star Icon"
+                />
+                We create impactful digital experiences.
+              </h1>
+              <div className="flex justify-end">
+                <img
+                    className="pb-5 relative right-14 w-[40px] maxLg:right-6"
+                    src="/icons/star2.svg"
+                    alt="star Icon"
+                />
+              </div>
+            </div>
             <p className="text-[#373737] text-2xl font-darkestMedium pr-4 maxMd:text-xl maxMd:mb-14">
               We combine forward-thinking design with modern technology to tell
               stories that transform and grow our partners brands.
