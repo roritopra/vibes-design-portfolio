@@ -8,7 +8,7 @@ export function AboutUsPage() {
   </div>
   <div className="bg-[#F3F3F3] min-h-screen flex justify-center items-center border-t-2 border-solid border-[#383838]">
     <div className="mx-auto my-4 bg-white p-4 border border-dashed border-black w-11/12 max-w-6xl">
-      <div className="flex flex-col justify-center items-center ">
+      <div className="flex flex-col md:flex-row justify-center items-center">
         <div className="w-full md:w-1/2 h-1/4 md:w-1/4 bg-[#A8AFF0] border-solid border-[#383838] border-t-2 md:border-b-2 md:border-l-2 md:border-r-2 ">
           <img className="w-full" src="/imgs/rodro_photo.png" alt="Gif" />
         </div>
@@ -178,14 +178,14 @@ export function AboutUsPage() {
 
   <div className="bg-[#F3F3F3] min-h-screen flex justify-center items-center border-t-2 border-solid border-[#383838]">
     <div className="mx-auto my-4 bg-white p-4 border border-dashed border-black w-11/12 max-w-6xl">
-      <div className="flex flex-col md:flex-row justify-center items-center">
-        <div className="w-full md:w-1/3 h-1/4 md:w-1/4 bg-[#D6EE5E] border-solid border-[#383838] border-t-2 md:border-b-2 md:border-l-2 md:border-r-2">
+      <div className="flex flex-col md:flex-row justify-center items-center ">
+        <div className="w-full md:w-1/2 h-1/4 md:w-1/4 bg-[#D6EE5E] border-solid border-[#383838] border-t-2 md:border-b-2 md:border-l-2 md:border-r-2">
           <img className="w-full" src="/imgs/alejo_photo.png" alt="Gif" />
         </div>
       </div>
       <div className="pl-0 w-full flex flex-col md:flex-row justify-start items-start bg-white pt-4">
         <h2 className="p-1 text-[#EE7E3F] text-5xl font-bagnard maxMd:text-3xl maxMd:p-4">
-          Alejandro Ruedas
+          Alejandro Rueda
         </h2>
       </div>
       <div className="pl-0 w-full flex flex-col md:flex-row justify-start items-start bg-white p-2">
