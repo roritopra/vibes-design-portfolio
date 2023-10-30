@@ -14,7 +14,7 @@ export function ProjectsPage() {
   return (
       <>
 <div className="border- border-[#373737] p-5">
-  <h1 className="text-[#373737] text-7xl font-bagnard font-bold mb-5 mt-2 ml-5 maxLg:text-5xl maxMd:text-3xl maxMd:mt-4 maxSm:text-sm">
+  <h1 className="text-[#373737] text-7xl font-bagnard mb-5 mt-2 ml-5 maxLg:text-5xl maxMd:text-3xl maxMd:mt-4 maxSm:text-sm">
     Projects
   </h1>
 </div>
