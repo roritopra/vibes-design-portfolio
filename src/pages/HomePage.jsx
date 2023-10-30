@@ -2,13 +2,27 @@ import { Link } from "react-router-dom";
 
 export function HomePage() {
   return (
-    <main className="pt-11 border-x-2 border-solid border-[#383838]">
+    <main className="pt-11 border-x-2 border-solid border-[#383838] bg-[#F3F3F3]">
       <header className="flex maxMd:flex-col">
         <div className="w-[55%] flex justify-between flex-col maxMd:w-full">
           <div className="pl-[60px] maxMd:px-5">
-            <h1 className="text-[#373737] text-7xl font-bagnard mb-5 mt-40 pr-4 maxLg:text-5xl maxMd:text-3xl maxMd:mt-4 maxSm:text-sm">
-              We create impactful digital experiences.
-            </h1>
+            <div className="flex flex-col">
+              <h1 className="text-[#373737] text-7xl font-bagnard mt-28 pr-4 maxLg:text-5xl maxMd:text-3xl maxMd:mt-4 maxSm:text-sm">
+                <img
+                  className="relative bottom-4 right-9 maxMd:right-3"
+                  src="/icons/star1.svg"
+                  alt="star Icon"
+                />
+                We create impactful digital experiences.
+              </h1>
+              <div className="flex justify-end">
+                <img
+                  className="pb-5 relative right-14 w-[40px] maxLg:right-6"
+                  src="/icons/star2.svg"
+                  alt="star Icon"
+                />
+              </div>
+            </div>
             <p className="text-[#373737] text-2xl font-darkestMedium pr-4 maxMd:text-xl maxMd:mb-14">
               We combine forward-thinking design with modern technology to tell
               stories that transform and grow our partners brands.
@@ -31,7 +45,23 @@ export function HomePage() {
           </div>
         </div>
         <div className="w-[45%] flex items-center justify-center pe-[60px] maxMd:w-full maxMd:px-5">
-          <div className="flex justify-center border-x-2 border-t-2 border-solid border-[#383838] rounded-t-full w-full pt-52">
+          <div className="relative flex justify-center border-x-2 border-t-2 border-solid border-[#383838] rounded-t-full w-full pt-52">
+            <img
+              className="absolute top-0 left-36 translate-y-24 maxXl:left-16 maxMd:translate-x-16 maxSm:left-4 maxXs:!translate-x-0 maxXs:!left-4"
+              src="/imgs/vibes_icon1.png"
+              alt="vibes1"
+            />
+            <img
+              className="absolute bottom-0 right-0 maxSm:w-[40%]"
+              src="/imgs/vibes_icon2.png"
+              alt="Vibes2"
+            />
+            <img
+              className="absolute bottom-10 left-0 translate-x-10"
+              src="/imgs/vibes_icon3.png"
+              alt="Vibes3"
+            />
+            <img className="absolute top-0 right-36 translate-y-28 maxXl:right-20 maxLg:translate-x-16 maxMd:!right-44 maxXs:!translate-x-36" src="/imgs/vibes_icon4.png" alt="Vibes4" />
             <img
               className="pb-24"
               src="/imgs/test_landing.png"
@@ -47,7 +77,7 @@ export function HomePage() {
           </h2>
         </div>
         <div className="w-[60%]">
-          <p className="p-11 text-lg text-[#373737] font-darkestMedium border-l-2 border-solid border-[#383838] maxMd:text-base maxMd:p-4">
+          <p className="p-11 text-lg h-full text-[#373737] font-darkestMedium border-l-2 border-solid border-[#383838] maxMd:text-base maxMd:p-4">
             From concept to production, we create compelling digital experiences
             that tell your brand’s unique story. No challenge is too small or
             too big, and we love them all, but most of all, we love creating
