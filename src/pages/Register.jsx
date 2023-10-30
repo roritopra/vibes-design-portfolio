@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export function Register() {
   return (
-    <main className="pt-11 border-x-2 border-solid border-[#383838]">
+    <main className="pt-11 border-x-2 border-solid border-[#383838] bg-[#F3F3F3]">
       <header className="flex maxMd:flex-col">
         <div className="w-[55%] flex justify-between flex-col maxMd:w-full">
           <div className="pl-[60px] maxMd:px-5">

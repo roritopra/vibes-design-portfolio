@@ -10,6 +10,7 @@ import {
 export function ProjectsPage() {
   return (
     <>
+    <main className="bg-[#F3F3F3] border-x-2 border-solid border-[#383838]">
       <div className="border- border-[#373737] p-5">
         <h1 className="text-[#373737] text-7xl font-bagnard mb-5 mt-2 ml-5 maxLg:text-5xl maxMd:text-3xl maxMd:mt-4 maxSm:text-sm">
           Projects
@@ -116,6 +117,7 @@ export function ProjectsPage() {
           </CardBody>
         </Card>
       </div>
+      </main>
     </>
   );
 }
