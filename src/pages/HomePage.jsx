@@ -17,9 +17,9 @@ export function HomePage() {
               </h1>
               <div className="flex justify-end">
                 <img
-                    className="pb-5 relative right-14 w-[40px] maxLg:right-6"
-                    src="/icons/star2.svg"
-                    alt="star Icon"
+                  className="pb-5 relative right-14 w-[40px] maxLg:right-6"
+                  src="/icons/star2.svg"
+                  alt="star Icon"
                 />
               </div>
             </div>
@@ -45,7 +45,23 @@ export function HomePage() {
           </div>
         </div>
         <div className="w-[45%] flex items-center justify-center pe-[60px] maxMd:w-full maxMd:px-5">
-          <div className="flex justify-center border-x-2 border-t-2 border-solid border-[#383838] rounded-t-full w-full pt-52">
+          <div className="relative flex justify-center border-x-2 border-t-2 border-solid border-[#383838] rounded-t-full w-full pt-52">
+            <img
+              className="absolute top-0 left-36 translate-y-24 maxXl:left-16 maxMd:translate-x-16 maxSm:left-4 maxXs:!translate-x-0 maxXs:!left-4"
+              src="/imgs/vibes_icon1.png"
+              alt="vibes1"
+            />
+            <img
+              className="absolute bottom-0 right-0 maxSm:w-[40%]"
+              src="/imgs/vibes_icon2.png"
+              alt="Vibes2"
+            />
+            <img
+              className="absolute bottom-10 left-0 translate-x-10"
+              src="/imgs/vibes_icon3.png"
+              alt="Vibes3"
+            />
+            <img className="absolute top-0 right-36 translate-y-28 maxXl:right-20 maxLg:translate-x-16 maxMd:!right-44 maxXs:!translate-x-36" src="/imgs/vibes_icon4.png" alt="Vibes4" />
             <img
               className="pb-24"
               src="/imgs/test_landing.png"
