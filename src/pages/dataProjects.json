@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "image": "/imgs/project1.png",
+        "title": "Starbucks OOH Mupi design",
+        "tags": ["UI", "DEV", "UX"]
+    },
+    {
+        "id": 2,
+        "image": "/imgs/project1.png",
+        "title": "Starbucks OOH Mupi design",
+        "tags": ["UI", "DEV", "UX"]
+    },
+    {
+        "id": 3,
+        "image": "/imgs/project1.png",
+        "title": "Starbucks OOH Mupi design",
+        "tags": ["UI", "DEV", "UX"]
+    },
+    {
+        "id": 4,
+        "image": "/imgs/project1.png",
+        "title": "Starbucks OOH Mupi design",
+        "tags": ["UI", "DEV", "UX"]
+    },
+    {
+        "id": 5,
+        "image": "/imgs/project1.png",
+        "title": "Starbucks OOH Mupi design",
+        "tags": ["UI", "DEV", "UX"]
+    },
+    {
+        "id": 6,
+        "image": "/imgs/project1.png",
+        "title": "Starbucks OOH Mupi design",
+        "tags": ["UI", "DEV", "UX"]
+    }
+]
