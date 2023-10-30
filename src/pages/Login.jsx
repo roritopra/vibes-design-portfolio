@@ -56,12 +56,8 @@ export function Login() {
           </div>
         </div>
         <div className="w-[45%] flex items-center justify-center pe-[60px] maxMd:w-full maxMd:px-5">
-          <div>
-            <img
-              src="/imgs/Login-name.png"
-              alt=""
-              className="small-image w-25"
-            />
+          <div >
+            <img src="/imgs/Loginandregister.png" alt=""  className="small-image w-25" />
           </div>
         </div>
       </header>

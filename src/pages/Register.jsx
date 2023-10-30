@@ -53,6 +53,12 @@ export function Register() {
               Sing In
             </button>
             <br></br>
+
+            <Link to ="/login">
+              <a> You already have an account?</a>
+            </Link>
+         
+            <br></br>
             <br></br>
             <Link to="/login">
               <h3 className="underline font-darkestMedium text-lg">Do you have account? Log in</h3>
@@ -64,13 +70,21 @@ export function Register() {
             <br></br>
             <br></br>
           </div>
+
+
+        
         </div>
         <div className="w-[45%] flex items-center justify-center pe-[60px] maxMd:w-full maxMd:px-5">
           <div>
-            <img src="/imgs/Login-name.png" alt="" />
+            <img src="/imgs/Loginandregister.png" alt="" />
           </div>
+
+       
+           
+           
         </div>
       </header>
     </main>
   );
 }
+
