@@ -51,7 +51,7 @@ export function ProjectsPage() {
         </main>
       </body>
 
-      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 p-5 font-darkestMedium">
+      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 p-5 font-darkestMedium pb-28">
         <Card className="w-full hover:bg-gray-100 cursor-pointer rounded-md">
           <CardHeader floated={false} className="">
             <img src="./imgs/project1.png" alt="profile-picture" />
