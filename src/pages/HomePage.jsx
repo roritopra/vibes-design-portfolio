@@ -30,10 +30,13 @@ export function HomePage() {
           </div>
           <div>
             <div className="maxMd:flex hidden px-8 pb-14 mb-14 border-b-2 border-solid border-[#383838]">
-              <button className="flex items-center justify-center gap-3 bg-[#A8AFF0] w-full font-darkestBold text-xl py-2 border-2 border-solid border-[#383838] rounded-full transition-all hover:bg-[#848ac2] hover:transition-all">
+              <Link
+                to="/projects"
+                className="flex items-center justify-center gap-3 bg-[#A8AFF0] w-full font-darkestBold text-xl py-2 border-2 border-solid border-[#383838] rounded-full transition-all hover:bg-[#848ac2] hover:transition-all"
+              >
                 Check out our best projects
                 <img className="pt-3" src="/icons/right_icon.svg" alt="" />
-              </button>
+              </Link>
             </div>
             <Link
               to="/projects"
@@ -61,7 +64,11 @@ export function HomePage() {
               src="/imgs/vibes_icon3.png"
               alt="Vibes3"
             />
-            <img className="absolute top-0 right-36 translate-y-28 maxXl:right-20 maxLg:translate-x-16 maxMd:!right-44 maxXs:!translate-x-36" src="/imgs/vibes_icon4.png" alt="Vibes4" />
+            <img
+              className="absolute top-0 right-36 translate-y-28 maxXl:right-20 maxLg:translate-x-16 maxMd:!right-44 maxXs:!translate-x-36"
+              src="/imgs/vibes_icon4.png"
+              alt="Vibes4"
+            />
             <img
               className="pb-24"
               src="/imgs/test_landing.png"
