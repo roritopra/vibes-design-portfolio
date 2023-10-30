@@ -15,5 +15,6 @@ export function AppRouter() {
       </Routes>
       <Footer />
     </main>
-  );
+  )
 }
+
