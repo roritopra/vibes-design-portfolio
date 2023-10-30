@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export function HomePage() {
   return (
-    <main className="pt-11 border-x-2 border-solid border-[#383838]">
+    <main className="pt-11 border-x-2 border-solid border-[#383838] bg-[#F3F3F3]">
       <header className="flex maxMd:flex-col">
         <div className="w-[55%] flex justify-between flex-col maxMd:w-full">
           <div className="pl-[60px] maxMd:px-5">
@@ -47,7 +47,7 @@ export function HomePage() {
           </h2>
         </div>
         <div className="w-[60%]">
-          <p className="p-11 text-lg text-[#373737] font-darkestMedium border-l-2 border-solid border-[#383838] maxMd:text-base maxMd:p-4">
+          <p className="p-11 text-lg h-full text-[#373737] font-darkestMedium border-l-2 border-solid border-[#383838] maxMd:text-base maxMd:p-4">
             From concept to production, we create compelling digital experiences
             that tell your brand’s unique story. No challenge is too small or
             too big, and we love them all, but most of all, we love creating
