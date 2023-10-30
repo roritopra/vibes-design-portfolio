@@ -1,5 +1,5 @@
-import {Footer} from '../components/Footer/Footer'
-function Login() {
+import { Link } from "react-router-dom";
+export function Login() {
   
 
   return (
@@ -41,12 +41,24 @@ function Login() {
             </div>
             <br></br>
             <br></br>
-            <button
+
+           <Link to ="/login">
+           <button
            
-              className="flex items-center justify-center gap-3 bg-[#A8AFF0] w-1/4 font-darkestBold text-2xl py-2 border-2 border-solid border-[#383838] rounded-md transition-all hover:bg-[#848ac2] hover:transition-all "
-            >
-              Log In
-            </button>
+           className="flex items-center justify-center gap-3 bg-[#A8AFF0] w-1/4 font-darkestBold text-2xl py-2 border-2 border-solid border-[#383838] rounded-md transition-all hover:bg-[#848ac2] hover:transition-all "
+         >
+           Log In
+         </button>
+
+           </Link>
+
+           <br></br>
+            <br></br>
+
+           <Link to ="/register">
+            <a>Don´t you have an account?.</a>
+            </Link>
+           
             <br></br>
             <br></br>
             <br></br>
@@ -59,16 +71,13 @@ function Login() {
         </div>
         <div className="w-[45%] flex items-center justify-center pe-[60px] maxMd:w-full maxMd:px-5">
           <div >
-            <img src="/imgs/Login-name.png" alt=""  className="small-image w-25" />
+            <img src="/imgs/Loginandregister.png" alt=""  className="small-image w-25" />
           </div>
         </div>
       </header>
       <br></br>
       <br></br>
-      <Footer />
     </main>
     
   );
 }
-
-export default Login;
