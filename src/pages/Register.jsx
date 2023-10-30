@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export function Register() {
   return (
     <main className="pt-11 border-x-2 border-solid border-[#383838]">
@@ -52,6 +54,9 @@ export function Register() {
             </button>
             <br></br>
             <br></br>
+            <Link to="/login">
+              <h3 className="underline font-darkestMedium text-lg">Do you have account? Log in</h3>
+            </Link>
             <br></br>
             <br></br>
             <br></br>
