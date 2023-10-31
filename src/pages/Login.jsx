@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export function Login() {
   return (
-    <main className="pt-11 border-x-2 border-solid border-[#383838]">
+    <main className="pt-11 border-x-2 border-solid border-[#383838] bg-[#F3F3F3]">
       <header className="flex maxMd:flex-col">
         <div className="w-[55%] flex justify-between flex-col maxMd:w-full">
           <div className="pl-[60px] maxMd:px-5">
@@ -56,12 +56,8 @@ export function Login() {
           </div>
         </div>
         <div className="w-[45%] flex items-center justify-center pe-[60px] maxMd:w-full maxMd:px-5">
-          <div>
-            <img
-              src="/imgs/Login-name.png"
-              alt=""
-              className="small-image w-25"
-            />
+          <div >
+            <img src="/imgs/Loginandregister.png" alt=""  className="small-image w-25" />
           </div>
         </div>
       </header>
