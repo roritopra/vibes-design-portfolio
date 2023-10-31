@@ -38,10 +38,10 @@ export function HomePage() {
                 <img className="pt-3" src="/icons/right_icon.svg" alt="" />
               </Link>
             </div>
-            <button className="flex items-center justify-center gap-3 bg-[#A8AFF0] w-full font-darkestBold text-3xl py-6 border-t-2 border-solid border-[#383838] transition-all hover:bg-[#848ac2] hover:transition-all maxMd:hidden">
+            <Link to="/projects" className="flex items-center justify-center gap-3 bg-[#A8AFF0] w-full font-darkestBold text-3xl py-6 border-t-2 border-solid border-[#383838] transition-all hover:bg-[#848ac2] hover:transition-all maxMd:hidden">
               Check out our best projects
               <img className="pt-3" src="/icons/right_icon.svg" alt="" />
-            </button>
+            </Link>
           </div>
         </div>
         <div className="w-[45%] flex items-center justify-center pe-[60px] maxMd:w-full maxMd:px-5">
