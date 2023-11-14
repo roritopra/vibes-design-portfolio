@@ -1,11 +1,30 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
 export function Register() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const auth = getAuth();
+  async function handleSignUp(e) {
+    e.preventDefault();
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((user) => {
+        // Success...
+        console.log(user);
+        //...
+      })
+      .catch((error) => {
+        // Error
+        console.log(error);
+      });
+  }
+
   return (
     <main className="pt-11 border-x-2 border-solid border-[#383838] bg-[#F3F3F3]">
       <header className="flex maxMd:flex-col">
         <div className="w-[55%] flex justify-between flex-col maxMd:w-full">
-          <div className="pl-[60px] maxMd:px-5">
+          <form action="#" className="pl-[60px] maxMd:px-5">
             <h1 className="text-[#373737] text-7xl font-bagnard mb-5 mt-24 pr-4 maxLg:text-5xl maxMd:text-3xl maxMd:mt-4 maxSm:text-sm">
               Welcome to <br></br> Design Vibes!
             </h1>
@@ -19,23 +38,20 @@ export function Register() {
 
             <div className="mb-5">
               <input
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                }}
                 type="text"
                 placeholder="Email"
                 className="text-[#373737] text-2xl font-darkestMedium pr-4 maxMd:text-xl maxMd:mb-14 rounded  w-1/2"
               />
             </div>
-            <br></br>
-            <div className="mb-5">
-              <input
-                type="text"
-                placeholder="Username"
-                className="text-[#373737] text-2xl font-darkestMedium pr-4 maxMd:text-xl maxMd:mb-14 rounded  w-1/2"
-              />
-            </div>
-            <br></br>
 
             <div className="mb-5">
               <input
+                onChange={(e) => {
+                  setPassword(e.target.value);
+                }}
                 type="password"
                 placeholder="Password"
                 className="text-[#373737] text-2xl font-darkestMedium pr-4 maxMd:text-xl maxMd:mb-14 rounded  w-1/2
@@ -49,19 +65,22 @@ export function Register() {
               Policy.
             </h3>
             <br></br>
-            <button className="flex items-center justify-center gap-3 bg-[#A8AFF0] w-1/4 font-darkestBold text-2xl py-2 border-2 border-solid border-[#383838] rounded-md transition-all hover:bg-[#848ac2] hover:transition-all ">
+            <button
+              onClick={(e) => {
+                handleSignUp(e);
+              }}
+              className="flex items-center justify-center gap-3 bg-[#A8AFF0] w-1/4 font-darkestBold text-2xl py-2 border-2 border-solid border-[#383838] rounded-md transition-all hover:bg-[#848ac2] hover:transition-all "
+            >
               Sing In
             </button>
             <br></br>
 
-            <Link to ="/login">
-              <a> You already have an account?</a>
-            </Link>
-         
             <br></br>
             <br></br>
             <Link to="/login">
-              <h3 className="underline font-darkestMedium text-lg">Do you have account? Log in</h3>
+              <h3 className="underline font-darkestMedium text-lg">
+                Do you have account? Log in
+              </h3>
             </Link>
             <br></br>
             <br></br>
@@ -69,22 +88,14 @@ export function Register() {
             <br></br>
             <br></br>
             <br></br>
-          </div>
-
-
-        
+          </form>
         </div>
         <div className="w-[45%] flex items-center justify-center pe-[60px] maxMd:w-full maxMd:px-5">
           <div>
             <img src="/imgs/Loginandregister.png" alt="" />
           </div>
-
-       
-           
-           
         </div>
       </header>
     </main>
   );
 }
-
