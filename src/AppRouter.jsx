@@ -1,12 +1,11 @@
 import { Routes, Route } from "react-router-dom";
-import { HomePage } from "./pages/HomePage";
-import { AboutUsPage } from "./pages/AboutUsPage";
-import { Header } from "./components/Header/Header";
-import { Footer } from "./components/Footer/Footer";
-import { ProjectsPage } from "./pages/ProjectsPage";
-import { Register } from "./pages/Register";
-import { Login } from "./pages/Login";
-//Aquí se importan los componentes que se van a usar en las rutas
+import { HomePage } from "./user/pages/HomePage";
+import { AboutUsPage } from "./user/pages/AboutUsPage";
+import { Header } from "./user/components/Header/Header";
+import { Footer } from "./user/components/Footer/Footer";
+import { ProjectsPage } from "./user/pages/ProjectsPage";
+import { Register } from "./auth/pages/Register";
+import { Login } from "./auth/pages/Login";
 
 export function AppRouter() {
   return (
