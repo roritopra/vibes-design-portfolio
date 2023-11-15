@@ -19,10 +19,5 @@ export const menuLinks = [
         id: 4,
         text: 'About Us',
         path: '/aboutus',
-    },
-    {
-        id: 5,
-        text: 'Login',
-        path: '/Login',
-    },
+    }
 ];

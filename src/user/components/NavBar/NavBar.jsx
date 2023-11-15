@@ -1,6 +1,7 @@
 import { menuLinks } from "./menuLinks/menuLinks";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -51,18 +52,28 @@ export function NavBar() {
 
       <ul className="flex items-center w-full maxLg:hidden">
         {menuLinks.map((menu, index) => (
-          <Link
+          <NavLink
             to={menu.path}
             key={index}
-            className={`flex items-center justify-center w-20% text-[#383838] border-[#383838] border-2 py-[21px] bg-white font-darkestBold text-lg cursor-pointer transition-all hover:bg-[#bfbfbf] hover:transition-all ${
-              index === menuLinks.length - 1
-                ? "text-[#ffffff] !bg-[#A8AFF0] hover:!bg-[#848ac2]"
-                : ""
-            }`}
+            className={({ isActive }) => {
+              return `flex items-center justify-center w-20% text-[#383838] border-[#383838] border-2 py-[21px] bg-white font-darkestBold text-lg cursor-pointer transition-all hover:bg-[#bfbfbf] hover:transition-all ${
+                isActive ? "bg-[#bfbfbf] py-3 px-6 text-black" : ""
+              }`;
+            }}
+
+
           >
             {menu.text}
-          </Link>
+          </NavLink>         
         ))}
+        <NavLink to="/login"
+        className={({ isActive }) => {
+          return `flex items-center justify-center w-20% text-white border-[#383838] border-2 py-[21px] bg-[#A8AFF0] font-darkestBold text-lg cursor-pointer transition-all hover:bg-[#848ac2] hover:transition-all ${
+            isActive ? "bg-[#848ac2] py-3 px-6 text-white" : ""
+          }`;
+        }}>
+            Login
+          </NavLink>
       </ul>
     </>
   );
