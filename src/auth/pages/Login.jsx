@@ -6,21 +6,28 @@ import {getAuth, signInWithEmailAndPassword} from 'firebase/auth'
 export function Login() {
   const [email,setEmail] = useState('')
   const [password,setPassword] = useState('')
+  const [errorMessage, setErrorMessage] = useState('');
   const auth = getAuth()
   const navigate = useNavigate();
   async function handleSignIn(e){
       e.preventDefault();
   signInWithEmailAndPassword(auth,email,password)
   .then((user) => {
-      // Success...
       console.log(user)
       navigate('/')
-      //...
   })
   .catch((error) => {
-      // Error
-      console.log(error)
-  })
+    switch (error.code) {
+      case 'auth/invalid-email':
+        setErrorMessage('The email address is not formatted correctly.');
+        break;
+      case 'auth/invalid-login-credentials':
+        setErrorMessage('Invalid email or password');
+        break;
+      default:
+        setErrorMessage(error.message);
+    }
+  });
   }
 
   return (
@@ -35,6 +42,7 @@ export function Login() {
             <h1 className="text-[#373737] text-7xl font-bagnard mb-5 mt-24 pr-4 maxLg:text-5xl maxMd:text-3xl maxMd:mt-4 maxSm:text-sm">
               Welcome Back!
             </h1>
+            {errorMessage && <p>{errorMessage}</p>}
             <h2>
               Sing up to see the latest projects full of talents, shine and
               vibes.
