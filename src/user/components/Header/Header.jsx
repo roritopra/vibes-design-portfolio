@@ -1,12 +1,16 @@
-import { NavBarBrand } from "../NavBar/NavBarBrand"
-import { NavBar } from "../NavBar/NavBar"
+import { NavBarBrand } from "../NavBar/NavBarBrand";
+import { NavBar } from "../NavBar/NavBar";
+import { Outlet } from "react-router-dom";
 
 export function Header() {
   return (
-    <nav className="flex items-center">
+    <main>
+      <div className="flex items-center">
         <NavBarBrand />
         <NavBar />
-    </nav>
-        
-  )
+      </div>
+
+      <Outlet />
+    </main>
+  );
 }

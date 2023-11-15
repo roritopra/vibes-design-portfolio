@@ -10,11 +10,13 @@ import { Login } from "./auth/pages/Login";
 export function AppRouter() {
   return (
     <main>
-      <Header />
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/aboutus" element={<AboutUsPage />} />
-        <Route path="/projects" element={<ProjectsPage />} />
+        <Route path="/" element={<Header />}>
+          <Route index element={<HomePage />} />
+          <Route path="/aboutus" element={<AboutUsPage />} />
+          <Route path="/projects" element={<ProjectsPage />} />
+        </Route>
+
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
       </Routes>
