@@ -12,7 +12,7 @@ export const menuLinks = [
     {   
         id: 3,
         text: 'Contact',
-        path: '/contact',
+        path: '/contact-us',
     },
 
     {
