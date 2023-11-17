@@ -14,7 +14,7 @@ export function Login() {
   signInWithEmailAndPassword(auth,email,password)
   .then((user) => {
       console.log(user)
-      navigate('/')
+      navigate('/dashboard')
   })
   .catch((error) => {
     switch (error.code) {

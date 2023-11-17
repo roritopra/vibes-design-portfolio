@@ -8,6 +8,7 @@ import { ContactUsPage } from "./user/pages/ContactUsPage";
 import { Register } from "./auth/pages/Register";
 import { Login } from "./auth/pages/Login";
 import { DashboardPage } from "./user/pages/DashboardPage";
+import { PrivateRouter } from "./user/router/PrivateRouter";
 
 export function AppRouter() {
   return (
@@ -19,6 +20,14 @@ export function AppRouter() {
           <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/contact-us" element={<ContactUsPage />} />
           <Route path="/dashboard" element={<DashboardPage />} />
+          <Route
+            path="/dashboard"
+            element={
+              <PrivateRouter>
+                <DashboardPage />
+              </PrivateRouter>
+            }
+          />
         </Route>
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
