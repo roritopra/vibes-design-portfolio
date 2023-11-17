@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import database from '../../auth/firebase/firebase';
+import {database} from '../../auth/firebase/firebase';
 
 export function ContactUsPage() {
 	const [name, setName] = useState();

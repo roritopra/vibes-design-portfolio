@@ -2,13 +2,29 @@ import {
   Card,
   CardHeader,
   CardBody,
-  CardFooter,
   Typography,
-  Tooltip,
 } from "@material-tailwind/react";
+import { collection, getDocs } from "firebase/firestore";
+import { database } from "../../auth/firebase/firebase";
+import { useEffect, useState } from "react";
 
 
 export function ProjectsPage() {
+
+  const [projects, setProjects] = useState([])
+
+  useEffect(() => {
+    (async() => {
+      const projectsCollection = collection(database, 'projects')
+      const projects = await getDocs(projectsCollection)
+      const projectsList = []
+      projects.forEach((project) => {
+        projectsList.push(project.data())
+      })
+      setProjects(projectsList)
+    })()
+  }, [])
+
   return (
     <>
     <main className="bg-[#F3F3F3] border-x-2 border-solid border-[#383838]">
