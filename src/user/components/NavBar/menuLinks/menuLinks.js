@@ -12,17 +12,12 @@ export const menuLinks = [
     {   
         id: 3,
         text: 'Contact',
-        path: '/contact',
+        path: '/contact-us',
     },
 
     {
         id: 4,
         text: 'About Us',
         path: '/aboutus',
-    },
-    {
-        id: 5,
-        text: 'Login',
-        path: '/Login',
-    },
+    }
 ];
