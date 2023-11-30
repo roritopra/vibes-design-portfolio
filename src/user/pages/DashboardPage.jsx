@@ -1,4 +1,6 @@
 import { database } from "../../auth/firebase/firebase";
+import { useContext } from "react";
+import { authContext } from "../../auth/context/AuthContext";
 import { collection, addDoc } from "firebase/firestore";
 
 export function DashboardPage() {
@@ -9,6 +11,12 @@ export function DashboardPage() {
         formData.tags = formData.tags.split(',')
         addDoc(projectsCollection, formData)
     }
+
+    const { logout } = useContext(authContext);
+
+  const handleLogout = () => {
+    logout();
+  };
   return (
     <div>
         <form onSubmit={handleUpload} action="">
@@ -17,6 +25,7 @@ export function DashboardPage() {
             <input name="tags" type="text" />
             <button>UPLOAD</button>
         </form>
+      <button onClick={handleLogout}>Logout</button>
     </div>
   )
 }
