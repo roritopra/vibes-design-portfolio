@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+<<<<<<< HEAD
 import { useAuth } from "../hooks/useAuth";
   const {
     register,  
@@ -12,6 +13,28 @@ async function handleSignUp(e){
    register();
 
 }
+=======
+import { useState } from "react";
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
+
+export function Register() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+  const auth = getAuth();
+  async function handleSignUp(e) {
+    e.preventDefault();
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((user) => {
+        console.log(user);
+        navigate('/')
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
+>>>>>>> parent of 2cfa9c7 (Merge pull request #29 from roritopra/landing)
 
   return (
     <main className="pt-11 border-x-2 border-solid border-[#383838] bg-[#F3F3F3]">
@@ -21,7 +44,6 @@ async function handleSignUp(e){
             <h1 className="text-[#373737] text-7xl font-bagnard mb-5 mt-24 pr-4 maxLg:text-5xl maxMd:text-3xl maxMd:mt-4 maxSm:text-sm">
               Welcome to <br></br> Design Vibes!
             </h1>
-            {errorMessage && <p>{errorMessage}</p>}
             <h2>
               Sing up to see the latest projects full of talents, shine and
               vibes.

@@ -1,6 +1,4 @@
 import { database } from "../../auth/firebase/firebase";
-import { useContext } from "react";
-import { authContext } from "../../auth/context/AuthContext";
 import { collection, addDoc } from "firebase/firestore";
 
 export function DashboardPage() {
@@ -11,6 +9,7 @@ export function DashboardPage() {
         formData.tags = formData.tags.split(',')
         addDoc(projectsCollection, formData)
     }
+<<<<<<< HEAD
 
     const { logout } = useContext(authContext);
 
@@ -63,6 +62,16 @@ export function DashboardPage() {
             Upload Project
           </button>
       <button onClick={handleLogout}>Logout</button>
+=======
+  return (
+    <div>
+        <form onSubmit={handleUpload} action="">
+            <input name="image" type="text" />
+            <input name="title" type="text" />
+            <input name="tags" type="text" />
+            <button>UPLOAD</button>
+        </form>
+>>>>>>> parent of 2cfa9c7 (Merge pull request #29 from roritopra/landing)
     </div>
   );
 }
