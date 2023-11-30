@@ -1,14 +1,23 @@
 import { database } from "../../auth/firebase/firebase";
+import { useContext } from "react";
+import { authContext } from "../../auth/context/AuthContext";
 import { collection, addDoc } from "firebase/firestore";
 
 export function DashboardPage() {
-  function handleUpload(e) {
-    e.preventDefault();
-    const formData = Object.fromEntries(new FormData(e.target));
-    const projectsCollection = collection(database, "projects");
-    formData.tags = formData.tags.split(",");
-    addDoc(projectsCollection, formData);
-  }
+    function handleUpload(e) {
+        e.preventDefault();
+        const formData = Object.fromEntries(new FormData(e.target));
+        const projectsCollection = collection(database, 'projects')
+        formData.tags = formData.tags.split(',')
+        addDoc(projectsCollection, formData)
+    }
+
+    const { logout } = useContext(authContext);
+
+  const handleLogout = () => {
+    logout();
+  };
+
   return (
     <div class="flex h-screen">
       <div class="w-1/2 bg-[#F3F3F3] border-x-2 border-solid border-[#383838]">
@@ -53,8 +62,7 @@ export function DashboardPage() {
           <button class="bg-[#383838] px-4 pb-1 flex items-center gap-2 text-white font-darkestRegular text-lg rounded-3xl transition-all hover:bg-[#1f1f1f] hover:transition-all">
             Upload Project
           </button>
-        </form>
-      </div>
+      <button onClick={handleLogout}>Logout</button>
     </div>
   );
 }
