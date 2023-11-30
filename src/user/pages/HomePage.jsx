@@ -38,10 +38,7 @@ export function HomePage() {
                 <img className="pt-3" src="/icons/right_icon.svg" alt="" />
               </Link>
             </div>
-            <Link
-              to="/projects"
-              className="flex items-center justify-center gap-3 bg-[#A8AFF0] w-full font-darkestBold text-3xl py-6 border-t-2 border-solid border-[#383838] transition-all hover:bg-[#848ac2] hover:transition-all maxMd:hidden"
-            >
+            <Link to="/projects" className="flex items-center justify-center gap-3 bg-[#A8AFF0] w-full font-darkestBold text-3xl py-6 border-t-2 border-solid border-[#383838] transition-all hover:bg-[#848ac2] hover:transition-all maxMd:hidden">
               Check out our best projects
               <img className="pt-3" src="/icons/right_icon.svg" alt="" />
             </Link>
@@ -97,57 +94,38 @@ export function HomePage() {
       <section className="p-11 grid sm:grid-cols-2 lg:grid-cols-3 gap-5 border-t-2 border-solid border-[#383838] bg-[#383838] bg-hero-pattern bg-[length:100%] maxMd:p-5">
         <article className="bg-[#A8AFF0] p-8 rounded-lg maxMd:p-4">
           <img src="/icons/heart_icon.svg" alt="Icon Heart" />
-          <h3 className="font-bagnard text-[#383838] text-4xl mt-6 maxMd:text-3xl">
-            Logo
-          </h3>
+          <h3 className="font-bagnard text-[#383838] text-4xl mt-6 maxMd:text-3xl">Logo</h3>
           <p className="text-black text-lg font-darkestMedium pb-7 maxMd:text-base">
             No logo? No problem. We can design your brand assets and guidelines.
           </p>
           <button className="bg-[#383838] px-4 pb-1 flex items-center gap-2 text-white font-darkestRegular text-lg rounded-3xl transition-all hover:bg-[#1f1f1f] hover:transition-all">
             Start
-            <img
-              className="pt-1"
-              src="/icons/right_icon_light.svg"
-              alt="Right Icon"
-            />
-          </button>
+            <img className="pt-1" src="/icons/right_icon_light.svg" alt="Right Icon" />
+            </button>
         </article>
 
         <article className="bg-[#B4FFC9] p-8 rounded-lg maxMd:p-4">
           <img src="/icons/figma_icon.svg" alt="Icon Heart" />
-          <h3 className="font-bagnard text-[#383838] text-4xl mt-6 maxMd:text-3xl">
-            Web Design
-          </h3>
+          <h3 className="font-bagnard text-[#383838] text-4xl mt-6 maxMd:text-3xl">Web Design</h3>
           <p className="text-black text-lg font-darkestMedium pb-7 maxMd:text-base">
             Do not have a design? I can create a beautiful website in no time.
           </p>
           <button className="bg-[#383838] px-4 pb-1 flex items-center gap-2 text-white font-darkestRegular text-lg rounded-3xl transition-all hover:bg-[#1f1f1f] hover:transition-all">
             Start
-            <img
-              className="pt-1"
-              src="/icons/right_icon_light.svg"
-              alt="Right Icon"
-            />
-          </button>
+            <img className="pt-1" src="/icons/right_icon_light.svg" alt="Right Icon" />
+            </button>
         </article>
-
+        
         <article className="bg-[#EE7E3F] p-8 rounded-lg maxMd:p-4">
           <img src="/icons/webflow_icon.svg" alt="Icon Heart" />
-          <h3 className="font-bagnard text-[#383838] text-4xl mt-6 maxMd:text-3xl">
-            Webflow
-          </h3>
+          <h3 className="font-bagnard text-[#383838] text-4xl mt-6 maxMd:text-3xl">Webflow</h3>
           <p className="text-black text-lg font-darkestMedium pb-7 maxMd:text-base">
-            Looking for a clean and fast build for your design? We are your
-            team.
+            Looking for a clean and fast build for your design? We are your team.
           </p>
           <button className="bg-[#383838] px-4 pb-1 flex items-center gap-2 text-white font-darkestRegular text-lg rounded-3xl transition-all hover:bg-[#1f1f1f] hover:transition-all">
             Start
-            <img
-              className="pt-1"
-              src="/icons/right_icon_light.svg"
-              alt="Right Icon"
-            />
-          </button>
+            <img className="pt-1" src="/icons/right_icon_light.svg" alt="Right Icon" />
+            </button>
         </article>
       </section>
       <figure>
