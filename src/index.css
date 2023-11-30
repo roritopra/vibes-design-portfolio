@@ -1,58 +1,58 @@
 @font-face {
-	font-family: 'Bagnard';
-	src: url('/fonts/Bagnard.otf') format('otf');
-	font-weight: bold;
-	font-style: normal;
-	font-display: swap;
+  font-family: "Bagnard";
+  src: url("/fonts/Bagnard.otf") format("otf");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
 @font-face {
-	font-family: 'DarkestGrotesque Regular';
-	src: url('/fonts/DarkerGrotesque-Regular.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
+  font-family: "DarkestGrotesque Regular";
+  src: url("/fonts/DarkerGrotesque-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 @font-face {
-	font-family: 'DarkestGrotesque Semibold';
-	src: url('/fonts/DarkerGrotesque-Semibold.woff') format('woff');
-	font-weight: 600;
-	font-style: normal;
-	font-display: swap;
+  font-family: "DarkestGrotesque Semibold";
+  src: url("/fonts/DarkerGrotesque-Semibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
 }
 @font-face {
-	font-family: 'DarkestGrotesque Medium';
-	src: url('/fonts/DarkerGrotesque-Medium.woff') format('woff');
-	font-weight: Medium;
-	font-style: normal;
-	font-display: swap;
+  font-family: "DarkestGrotesque Medium";
+  src: url("/fonts/DarkerGrotesque-Medium.woff") format("woff");
+  font-weight: Medium;
+  font-style: normal;
+  font-display: swap;
 }
 @font-face {
-	font-family: 'DarkestGrotesque Light';
-	src: url('/fonts/DarkerGrotesque-Light.woff') format('woff');
-	font-weight: 300;
-	font-style: normal;
-	font-display: swap;
+  font-family: "DarkestGrotesque Light";
+  src: url("/fonts/DarkerGrotesque-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
 }
 @font-face {
-	font-family: 'DarkestGrotesque Bold';
-	src: url('/fonts/DarkerGrotesque-Bold.woff') format('woff');
-	font-weight: Bold;
-	font-style: normal;
-	font-display: swap;
+  font-family: "DarkestGrotesque Bold";
+  src: url("/fonts/DarkerGrotesque-Bold.woff") format("woff");
+  font-weight: Bold;
+  font-style: normal;
+  font-display: swap;
 }
 @font-face {
-	font-family: 'DarkestGrotesque ExtraBold';
-	src: url('/fonts/DarkerGrotesque-Extrabold.woff') format('woff');
-	font-weight: 800;
-	font-style: normal;
-	font-display: swap;
+  font-family: "DarkestGrotesque ExtraBold";
+  src: url("/fonts/DarkerGrotesque-Extrabold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
 }
 @font-face {
-	font-family: 'DarkestGrotesque Black';
-	src: url('/fonts/DarkerGrotesque-Black.woff') format('woff');
-	font-weight: 900;
-	font-style: normal;
-	font-display: swap;
+  font-family: "DarkestGrotesque Black";
+  src: url("/fonts/DarkerGrotesque-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
 }
 
 @tailwind base;

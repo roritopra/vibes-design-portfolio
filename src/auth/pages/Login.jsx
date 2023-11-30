@@ -1,20 +1,12 @@
 import { Link } from "react-router-dom";
 import { useAuth } from "../hooks/useAuth";
 
-
 export function Login() {
-  
-  const {
-       login,  
-       setEmail,
-       setPassword,
-       errorMessage
-  } = useAuth()
+  const { login, setEmail, setPassword, errorMessage } = useAuth();
 
-  async function handleSignIn(e){
-      e.preventDefault();
-      login();
-  
+  async function handleSignIn(e) {
+    e.preventDefault();
+    login();
   }
 
   return (
@@ -39,7 +31,9 @@ export function Login() {
             <br></br>
             <div className="mb-5">
               <input
-                onChange={(e) => {setEmail(e.target.value)}}
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                }}
                 type="text"
                 placeholder="Username or Email"
                 className="text-[#373737] text-2xl font-darkestMedium pr-4 maxMd:text-xl maxMd:mb-14 rounded  w-1/2"
@@ -49,7 +43,9 @@ export function Login() {
 
             <div className="mb-5">
               <input
-                onChange={(e) => {setPassword(e.target.value)}}
+                onChange={(e) => {
+                  setPassword(e.target.value);
+                }}
                 type="password"
                 placeholder="Password"
                 className="text-[#373737] text-2xl font-darkestMedium pr-4 maxMd:text-xl maxMd:mb-14 rounded  w-1/2
@@ -58,15 +54,20 @@ export function Login() {
             </div>
             <br></br>
             <br></br>
-            <button 
-            onClick={(e) => {handleSignIn(e)}}
-            className="flex items-center justify-center gap-3 bg-[#A8AFF0] w-1/4 font-darkestBold text-2xl py-2 border-2 border-solid border-[#383838] rounded-md transition-all hover:bg-[#848ac2] hover:transition-all ">
+            <button
+              onClick={(e) => {
+                handleSignIn(e);
+              }}
+              className="flex items-center justify-center gap-3 bg-[#A8AFF0] w-1/4 font-darkestBold text-2xl py-2 border-2 border-solid border-[#383838] rounded-md transition-all hover:bg-[#848ac2] hover:transition-all "
+            >
               Log In
             </button>
             <br></br>
             <br></br>
             <Link to="/register">
-              <h3 className="underline font-darkestMedium text-lg">Do not have an account? Sign Up</h3>
+              <h3 className="underline font-darkestMedium text-lg">
+                Do not have an account? Sign Up
+              </h3>
             </Link>
             <br></br>
             <br></br>
@@ -77,8 +78,12 @@ export function Login() {
           </form>
         </div>
         <div className="w-[45%] flex items-center justify-center pe-[60px] maxMd:w-full maxMd:px-5">
-          <div >
-            <img src="/imgs/Loginandregister.png" alt=""  className="small-image w-25" />
+          <div>
+            <img
+              src="/imgs/Loginandregister.png"
+              alt=""
+              className="small-image w-25"
+            />
           </div>
         </div>
       </header>

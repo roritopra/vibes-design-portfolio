@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom";
 import { useAuth } from "../hooks/useAuth";
-
-export function Register() {
   const {
     register,  
     setEmail,
