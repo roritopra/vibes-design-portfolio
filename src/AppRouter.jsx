@@ -1,17 +1,36 @@
 import { Routes, Route } from "react-router-dom";
-import { HomePage } from "./pages/HomePage";
-import { AboutUsPage } from "./pages/AboutUsPage";
-import { Header } from "./components/Header/Header";
-import { Footer } from "./components/Footer/Footer";
-//Aquí se importan los componentes que se van a usar en las rutas
+import { HomePage } from "./user/pages/HomePage";
+import { AboutUsPage } from "./user/pages/AboutUsPage";
+import { Header } from "./user/components/Header/Header";
+import { Footer } from "./user/components/Footer/Footer";
+import { ProjectsPage } from "./user/pages/ProjectsPage";
+import { ContactUsPage } from "./user/pages/ContactUsPage";
+import { Register } from "./auth/pages/Register";
+import { Login } from "./auth/pages/Login";
+import { DashboardPage } from "./user/pages/DashboardPage";
+import { PrivateRouter } from "./user/router/PrivateRouter";
 
 export function AppRouter() {
   return (
     <main>
-      <Header />
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/aboutus" element={<AboutUsPage />} />
+        <Route path="/" element={<Header />}>
+          <Route index element={<HomePage />} />
+          <Route path="/aboutus" element={<AboutUsPage />} />
+          <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/contact-us" element={<ContactUsPage />} />
+          <Route path="/dashboard" element={<DashboardPage />} />
+          <Route
+            path="/dashboard"
+            element={
+              <PrivateRouter>
+                <DashboardPage />
+              </PrivateRouter>
+            }
+          />
+        </Route>
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
       <Footer />
     </main>
