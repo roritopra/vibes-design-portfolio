@@ -19,7 +19,6 @@ export function AppRouter() {
           <Route path="/aboutus" element={<AboutUsPage />} />
           <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/contact-us" element={<ContactUsPage />} />
-          <Route path="/dashboard" element={<DashboardPage />} />
           <Route
             path="/dashboard"
             element={
