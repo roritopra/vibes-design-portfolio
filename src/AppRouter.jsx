@@ -13,12 +13,13 @@ import { PrivateRouter } from "./user/router/PrivateRouter";
 export function AppRouter() {
   return (
     <main>
-      <Header/>
       <Routes>
-        <Route path="/" element={<HomePage/>}/>
+        <Route path="/" element={<Header />}>
+          <Route index element={<HomePage />} />
           <Route path="/aboutus" element={<AboutUsPage />} />
           <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/contact-us" element={<ContactUsPage />} />
+          <Route path="/dashboard" element={<DashboardPage />} />
           <Route
             path="/dashboard"
             element={
@@ -27,7 +28,7 @@ export function AppRouter() {
               </PrivateRouter>
             }
           />
-  
+        </Route>
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
       </Routes>
