@@ -1,33 +1,20 @@
 import { Link } from "react-router-dom";
-import { useState } from "react"
-import { useNavigate } from "react-router-dom"
-import {getAuth, signInWithEmailAndPassword} from 'firebase/auth'
+import { useAuth } from "../hooks/useAuth";
+
 
 export function Login() {
-  const [email,setEmail] = useState('')
-  const [password,setPassword] = useState('')
-  const [errorMessage, setErrorMessage] = useState('');
-  const auth = getAuth()
-  const navigate = useNavigate();
+  
+  const {
+       login,  
+       setEmail,
+       setPassword,
+       errorMessage
+  } = useAuth()
+
   async function handleSignIn(e){
       e.preventDefault();
-  signInWithEmailAndPassword(auth,email,password)
-  .then((user) => {
-      console.log(user)
-      navigate('/dashboard')
-  })
-  .catch((error) => {
-    switch (error.code) {
-      case 'auth/invalid-email':
-        setErrorMessage('The email address is not formatted correctly.');
-        break;
-      case 'auth/invalid-login-credentials':
-        setErrorMessage('Invalid email or password');
-        break;
-      default:
-        setErrorMessage(error.message);
-    }
-  });
+      login();
+  
   }
 
   return (
