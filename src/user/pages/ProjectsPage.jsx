@@ -144,7 +144,7 @@ export function ProjectsPage() {
 
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 p-5 font-darkestMedium pb-28">
           {filteredProjects.map((project, index) => (
-            <Link to={`/projects/${project.title}`} key={index}>
+            <Link to={`/projects/${project.id}`} key={index}>
               <Card className="w-full hover:bg-gray-100 cursor-pointer rounded-md">
                 <CardHeader floated={false} className="">
                   <img src={project.image} alt="front-page" />
