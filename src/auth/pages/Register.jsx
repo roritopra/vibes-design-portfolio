@@ -13,7 +13,7 @@ export function Register() {
     createUserWithEmailAndPassword(auth, email, password)
       .then((user) => {
         console.log(user);
-        navigate('/')
+        navigate("/");
       })
       .catch((error) => {
         console.log(error);
