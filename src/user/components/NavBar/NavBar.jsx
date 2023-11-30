@@ -1,8 +1,10 @@
 import { menuLinks } from "./menuLinks/menuLinks";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { useAuth } from "../../../auth/hooks/useAuth";
 
 export function NavBar() {
+  const {user} = useAuth()
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleNavbar = () => {
@@ -75,7 +77,7 @@ export function NavBar() {
             to={menu.path}
             key={index}
             className={({ isActive }) => {
-              return `flex items-center justify-center w-20% text-[#383838] border-[#383838] border-2 py-[21px] bg-white font-darkestBold text-lg cursor-pointer transition-all hover:bg-[#bfbfbf] hover:transition-all ${
+              return `flex items-center justify-center w-20% text-[#383838] border-[#383838] border-2 py-[21px] font-darkestBold text-lg cursor-pointer transition-all hover:bg-[#bfbfbf] hover:transition-all ${
                 isActive ? "bg-[#bfbfbf] py-3 px-6 text-black" : ""
               }`;
             }}
@@ -83,7 +85,19 @@ export function NavBar() {
             {menu.text}
           </NavLink>
         ))}
-        <NavLink
+        {user ? (
+          <NavLink
+          to="/dashboard"
+          className={({ isActive }) => {
+            return `flex items-center justify-center w-20% text-white border-[#383838] border-2 py-[21px] font-darkestBold text-lg cursor-pointer transition-all hover:bg-[#EE671B] hover:transition-all ${
+              isActive ? "bg-[#EC5704] py-3 px-6 text-white" : "bg-[#EE7E3F]"
+            }`;
+          }}
+        >
+          Dashboard
+        </NavLink>
+        ) : (
+          <NavLink
           to="/login"
           className={({ isActive }) => {
             return `flex items-center justify-center w-20% text-white border-[#383838] border-2 py-[21px] bg-[#A8AFF0] font-darkestBold text-lg cursor-pointer transition-all hover:bg-[#848ac2] hover:transition-all ${
@@ -93,6 +107,9 @@ export function NavBar() {
         >
           Login
         </NavLink>
+        )
+
+        }
       </ul>
     </>
   );
