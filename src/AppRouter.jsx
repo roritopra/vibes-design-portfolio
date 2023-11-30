@@ -13,7 +13,9 @@ import { PrivateRouter } from "./user/router/PrivateRouter";
 export function AppRouter() {
   return (
     <main>
+      
       <Header/>
+    
       <Routes>
         <Route path="/" element={<HomePage/>}/>
           <Route path="/aboutus" element={<AboutUsPage />} />
