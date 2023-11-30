@@ -2,7 +2,7 @@ import { createContext, useState, useEffect } from "react";
 import { onAuthStateChanged } from 'firebase/auth'
 import { auth } from "../firebase/firebase";
 import { useNavigate } from "react-router-dom"
-import {signInWithEmailAndPassword} from 'firebase/auth'
+import {signInWithEmailAndPassword, createUserWithEmailAndPassword} from 'firebase/auth'
 
 
 export const authContext = createContext();
@@ -47,6 +47,27 @@ export function AuthContext({children}){
       
     }
 
+    const register = () =>{
+      createUserWithEmailAndPassword(auth,email,password)
+      .then((user) => {
+            console.log(user)
+            navigate('/dashboard')
+      })
+      .catch((error) => {
+         switch (error.code) {
+            case 'auth/invalid-email':
+            setErrorMessage('The email address is not formatted correctly.');
+            break;
+            case 'auth/invalid-login-credentials':
+            setErrorMessage('Invalid email or password');
+            break;
+            default:
+            setErrorMessage(error.message);
+         }
+      });
+      
+    }
+
     const logout = () => {
    //Hacer deslogueo de firebase 
       signOut(auth).then(() => {
@@ -62,6 +83,7 @@ export function AuthContext({children}){
         user,
        setUser,
        login,
+       register,
        email,
        setEmail,
        password,

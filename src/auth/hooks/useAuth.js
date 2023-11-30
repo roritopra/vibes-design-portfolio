@@ -5,13 +5,14 @@ export function useAuth(){
     if (!context){
         throw new Error("the component is not inside the provide authcontext")
     }
-    const {   errorMessage,setPassword, password, email,setEmail,login, user, setUser } = context
+    const {   errorMessage,setPassword, password, email,setEmail,login, register, user, setUser } = context
 
     return{
 
     user,
     setUser,
     login,
+    register,
     email,
     setEmail,
     password,
