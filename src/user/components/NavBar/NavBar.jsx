@@ -1,8 +1,10 @@
 import { menuLinks } from "./menuLinks/menuLinks";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { useAuth } from "../../../auth/hooks/useAuth";
 
 export function NavBar() {
+  const {user} = useAuth()
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleNavbar = () => {
@@ -83,7 +85,19 @@ export function NavBar() {
             {menu.text}
           </NavLink>
         ))}
-        <NavLink
+        {user ? (
+          <NavLink
+          to="/dashboard"
+          className={({ isActive }) => {
+            return `flex items-center justify-center w-20% text-white border-[#383838] border-2 py-[21px] bg-[#A8AFF0] font-darkestBold text-lg cursor-pointer transition-all hover:bg-[#848ac2] hover:transition-all ${
+              isActive ? "bg-[#848ac2] py-3 px-6 text-white" : ""
+            }`;
+          }}
+        >
+          Dashboard
+        </NavLink>
+        ) : (
+          <NavLink
           to="/login"
           className={({ isActive }) => {
             return `flex items-center justify-center w-20% text-white border-[#383838] border-2 py-[21px] bg-[#A8AFF0] font-darkestBold text-lg cursor-pointer transition-all hover:bg-[#848ac2] hover:transition-all ${
@@ -93,6 +107,9 @@ export function NavBar() {
         >
           Login
         </NavLink>
+        )
+
+        }
       </ul>
     </>
   );
