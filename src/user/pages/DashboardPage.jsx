@@ -9,7 +9,10 @@ export function DashboardPage() {
     const formData = Object.fromEntries(new FormData(e.target));
     const projectsCollection = collection(database, "projects");
     formData.tags = formData.tags.split(",");
-    addDoc(projectsCollection, formData);
+    addDoc(projectsCollection, formData).then(() => {
+      alert("Success");
+      window.location.href = "/projects";
+    });
   }
 
   const { logout } = useContext(authContext);
