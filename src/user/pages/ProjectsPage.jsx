@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import {
   Card,
   CardHeader,
@@ -7,6 +7,7 @@ import {
 } from "@material-tailwind/react";
 import { collection, getDocs } from "firebase/firestore";
 import { database } from "../../auth/firebase/firebase";
+import { Link } from "react-router-dom";
 
 export function ProjectsPage() {
   const [projects, setProjects] = useState([]);
@@ -23,7 +24,9 @@ export function ProjectsPage() {
     (async () => {
       const projectsCollection = collection(database, "projects");
       const projectsSnapshot = await getDocs(projectsCollection);
-      const projectsList = projectsSnapshot.docs.map((project) => project.data());
+      const projectsList = projectsSnapshot.docs.map((project) =>
+        project.data()
+      );
       setProjects(projectsList);
       setFilteredProjects(projectsList);
     })();
@@ -141,34 +144,33 @@ export function ProjectsPage() {
 
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 p-5 font-darkestMedium pb-28">
           {filteredProjects.map((project, index) => (
-            <Card
-              key={index}
-              className="w-full hover:bg-gray-100 cursor-pointer rounded-md"
-            >
-              <CardHeader floated={false} className="">
-                <img src={project.image} alt="front-page" />
-              </CardHeader>
-              <CardBody className="text-center">
-                <Typography
-                  variant="h4"
-                  color="blue-gray"
-                  className="mb-2 font-darkestBlack"
-                >
-                  {project.title}
-                </Typography>
-                <Typography
-                  color="blue-gray"
-                  className="font-darkestBold"
-                  textGradient
-                >
-                  {project.tags.map((tag, index) => (
-                    <span key={index} className="mr-2">
-                      {tag}
-                    </span>
-                  ))}
-                </Typography>
-              </CardBody>
-            </Card>
+            <Link to={`/projects/${project.title}`} key={index}>
+              <Card className="w-full hover:bg-gray-100 cursor-pointer rounded-md">
+                <CardHeader floated={false} className="">
+                  <img src={project.image} alt="front-page" />
+                </CardHeader>
+                <CardBody className="text-center">
+                  <Typography
+                    variant="h4"
+                    color="blue-gray"
+                    className="mb-2 font-darkestBlack"
+                  >
+                    {project.title}
+                  </Typography>
+                  <Typography
+                    color="blue-gray"
+                    className="font-darkestBold"
+                    textGradient
+                  >
+                    {project.tags.map((tag, index) => (
+                      <span key={index} className="mr-2">
+                        {tag}
+                      </span>
+                    ))}
+                  </Typography>
+                </CardBody>
+              </Card>
+            </Link>
           ))}
         </div>
       </main>

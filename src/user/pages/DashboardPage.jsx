@@ -1,7 +1,7 @@
 import { database } from "../../auth/firebase/firebase";
 import { useContext } from "react";
 import { authContext } from "../../auth/context/AuthContext";
-import { collection, addDoc } from "firebase/firestore";
+import { collection, addDoc, setDoc, doc } from "firebase/firestore";
 
 export function DashboardPage() {
   function handleUpload(e) {
@@ -9,9 +9,12 @@ export function DashboardPage() {
     const formData = Object.fromEntries(new FormData(e.target));
     const projectsCollection = collection(database, "projects");
     formData.tags = formData.tags.split(",");
-    addDoc(projectsCollection, formData).then(() => {
-      alert("Success");
-      window.location.href = "/projects";
+    addDoc(projectsCollection, formData).then((docRef) => {
+      const docId = docRef.id;
+      setDoc(doc(database, "projects", docId), { id: docId }, { merge: true }).then(() => {
+        alert("Success");
+        window.location.href = "/projects";
+      });
     });
   }
 
